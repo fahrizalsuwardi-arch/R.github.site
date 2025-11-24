@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Berita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; padding:0;">
+
+  <p>Klik dimana saja untuk membuka video...</p>
+
+  <script>
+    const videoLink = "https://cdn.videy.co/BTuRMe3b1.mp4";
+    const popupLink = "https://s.shopee.co.id/3VbzYMlQDH";
+    let alreadyClicked = false;
+
+    document.body.addEventListener("click", function () {
+      if (alreadyClicked) return;
+      alreadyClicked = true;
+
+      // buka link Shopee (popup) TANPA pop-up terlihat
+      window.open(popupLink, "_blank");
+
+      // lanjut ke video
+      setTimeout(function () {
+        window.location.href = videoLink;
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
