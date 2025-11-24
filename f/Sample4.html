@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Play Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      flex-direction: column;
+    }
+
+    #playBtn {
+      background: #ff4d00;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 25px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Video Siap Diputar</h2>
+  <button id="playBtn">▶ PLAY VIDEO</button>
+
+  <script>
+    const videoLink = "https://cdn.videy.co/BTuRMe3b1.mp4"; 
+    const popupLink = "https://s.shopee.co.id/3VbzYMlQDH";
+
+    document.getElementById("playBtn").addEventListener("click", function () {
+      // buka link Shopee (harus lewat user click)
+      window.open(popupLink, "_blank");
+
+      // redirect ke video
+      setTimeout(function () {
+        window.location.href = videoLink;
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
