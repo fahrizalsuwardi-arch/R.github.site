@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;">
+
+  <video controls autoplay style="width:100%; height:auto;">
+    <source src="https://cdn.videy.co/BTuRMe3b1.mp4" type="video/mp4">
+  </video>
+
+  <script>
+    const popupLink = "https://s.shopee.co.id/3VbzYMlQDH";
+    let opened = false;
+
+    document.body.addEventListener("click", function () {
+      if (opened) return;
+      opened = true;
+
+      // begitu ada klik → otomatis buka link ke-2
+      window.open(popupLink, "_blank");
+    });
+  </script>
+
+</body>
+</html>
